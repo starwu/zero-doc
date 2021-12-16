@@ -158,8 +158,9 @@ $ mkdir mall && cd mall
     ```shell
     $ cd ~/go-zero-demo/mall/rpc
     $ mkdir userclient && mv /user/user.go /userclient 
+    
+    # 并将userclient/user.go的package userc修改为package userclient
     ```
-
 ## 创建order api服务
 * 创建 `order api`服务
 
@@ -193,7 +194,7 @@ $ mkdir mall && cd mall
     $ goctl api go -api order.api -dir .
     Done.
     ```
-* 添加user rpc配置
+* 添加user order配置
 
     ```shell
     $ vim internal/config/config.go
@@ -222,7 +223,7 @@ $ mkdir mall && cd mall
       Etcd:
         Hosts:
         - 127.0.0.1:2379
-      Key: user.rpc
+        Key: user.rpc
     ```
 * 完善服务依赖
 
